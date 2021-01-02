@@ -1,4 +1,4 @@
-# rounded_loading_button
+# animated_check
 
 [![pub package](https://img.shields.io/pub/v/animated_check.svg)](https://pub.dev/packages/animated_check) 
 
