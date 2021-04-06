@@ -26,46 +26,45 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
-
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   AnimationController _animationController;
   Animation<double> _animation;
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
-    
-    _animationController = AnimationController(vsync: this, duration: Duration(seconds: 1));
-    
-    _animation = new Tween<double>(begin: 0, end: 1).animate(new CurvedAnimation(parent: _animationController, curve: Curves.easeInOutCirc));
+
+    _animationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
+
+    _animation = new Tween<double>(begin: 0, end: 1).animate(
+        new CurvedAnimation(
+            parent: _animationController, curve: Curves.easeInOutCirc));
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Animated Check Example"),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: AnimatedCheck(
+        appBar: AppBar(
+          title: Text("Animated Check Example"),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                  child: AnimatedCheck(
                 progress: _animation,
                 size: 200,
-              )
-            ),
-            FlatButton(
-              child: Text("Check"),
-              onPressed: _animationController.forward),
-            FlatButton(
-              child: Text("Reset"),
-              onPressed: _animationController.reset)
-          ],
-        ),
-      )
-    );
+              )),
+              TextButton(
+                  child: Text("Check"),
+                  onPressed: _animationController.forward),
+              TextButton(
+                  child: Text("Reset"), onPressed: _animationController.reset)
+            ],
+          ),
+        ));
   }
 }
