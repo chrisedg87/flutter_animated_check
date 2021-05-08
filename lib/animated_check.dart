@@ -9,14 +9,14 @@ class AnimatedCheck extends StatefulWidget {
   final double size;
 
   // The primary color of the checkmark
-  final Color color;
+  final Color? color;
 
   // The width of the checkmark stroke
-  final double strokeWidth;
+  final double? strokeWidth;
 
   AnimatedCheck({
-    @required this.progress,
-    @required this.size,
+    required this.progress,
+    required this.size,
     this.color,
     this.strokeWidth});
 
@@ -50,7 +50,7 @@ class AnimatedPathPainter extends CustomPainter {
 
   final Color _color;
 
-  final double strokeWidth;
+  final double? strokeWidth;
 
   AnimatedPathPainter(this._animation, this._color, this.strokeWidth) : super(repaint: _animation);
 
