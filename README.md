@@ -4,7 +4,7 @@
 
 AnimatedCheck is a Flutter package with a simple implementation of an animated checkmark icon.
 
-![](screenshots/animated_check.gif)
+![](https://github.com/chrisedg87/flutter_animated_check/raw/main/screenshots/animated_check.gif)
 
 ## Installation
 
