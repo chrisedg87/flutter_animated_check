@@ -1,6 +1,6 @@
 name: animated_check
 description: A simple animated check icon widget for Flutter
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/chrisedg87/flutter_animated_check
 
 environment:

@@ -1,3 +1,7 @@
+## [1.0.5]
+
+* Updated example in README
+
 ## [1.0.4]
 
 * Updated readme
